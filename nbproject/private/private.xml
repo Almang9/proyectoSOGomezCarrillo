@@ -2,6 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/C:/Users/AJCV0/Documents/AJCV%20UNIMET/Trimestre%208/Sistemas%20Operativos/ProyectoSOGomez-Carrillo/src/proyectosogomez/carrillo/Simulacion.java</file>
+            <file>file:/C:/Users/AJCV0/Documents/AJCV%20UNIMET/Trimestre%208/Sistemas%20Operativos/ProyectoSOGomez-Carrillo/src/proyectosogomez/carrillo/Gerente.java</file>
+            <file>file:/C:/Users/AJCV0/Documents/AJCV%20UNIMET/Trimestre%208/Sistemas%20Operativos/ProyectoSOGomez-Carrillo/src/proyectosogomez/carrillo/Productor.java</file>
+            <file>file:/C:/Users/AJCV0/Documents/AJCV%20UNIMET/Trimestre%208/Sistemas%20Operativos/ProyectoSOGomez-Carrillo/src/proyectosogomez/carrillo/Ensamblador.java</file>
+            <file>file:/C:/Users/AJCV0/Documents/AJCV%20UNIMET/Trimestre%208/Sistemas%20Operativos/ProyectoSOGomez-Carrillo/src/proyectosogomez/carrillo/Jefe.java</file>
+            <file>file:/C:/Users/AJCV0/Documents/AJCV%20UNIMET/Trimestre%208/Sistemas%20Operativos/ProyectoSOGomez-Carrillo/src/proyectosogomez/carrillo/Almacen.java</file>
+        </group>
+>>>>>>> f037417f98354dc240d1065de230b37addd36e3b
     </open-files>
 </project-private>
