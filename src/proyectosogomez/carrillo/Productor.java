@@ -64,7 +64,8 @@ public class Productor extends Thread{
                         almacen.botones = almacen.botones + 2;
                         System.out.println("Se produjeron 2 botones");
                         System.out.println("Cantidad de botones: " + almacen.botones);
-                        
+                        Window.x = Integer.toString(almacen.botones);
+                        System.out.print(Window.x);
                         mutexAlmacen.release();
                         
                         //Aumenta la cantidad de botones que hay disponibles

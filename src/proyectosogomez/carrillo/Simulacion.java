@@ -5,25 +5,14 @@
  */
 package proyectosogomez.carrillo;
 
+import java.util.Map;
 import java.util.concurrent.Semaphore;
 
-/**
+/** 
  *
  * @author AJCV0
  */
 public class Simulacion {
-<<<<<<< HEAD
-    public static volatile int contador = 3;
-    
-    public static void main(String[] args) {
-        Semaphore semCont = new Semaphore(1);
-        Jefe j = new Jefe(24, semCont);
-        Gerente g = new Gerente(24, 3, semCont);
-        
-        
-        j.start();
-        g.start();
-=======
     //Contador de días restantes
     public static volatile int contador;
     
@@ -31,7 +20,7 @@ public class Simulacion {
     Almacen almacen;
     
     //Parámetros de la simulación (archivo)
-    
+     Map <String,String> datos;
     
     //Arreglos de productores
     Productor[] botones, pantallas, joysticks, lectoresSD;
@@ -71,9 +60,10 @@ public class Simulacion {
     public void inicializar() {
         //Leer el archivo para obtener los parámetros
         //FALTA
-        
+        Archivo archivo = new Archivo();
+        datos =archivo.getParametros();
         //Establecer el contador de días a su cantidad inicial
-        contador = 15; //CAMBIAR VALOR CON EL QUE APARECE EN EL ARCHIVO
+        contador = Integer.parseInt(datos.get("contador")); //CAMBIAR VALOR CON EL QUE APARECE EN EL ARCHIVO
         
         //Crear semáforos
         
@@ -89,10 +79,10 @@ public class Simulacion {
         
         //PRODUCTORES
         //CAMBIAR VALORES POR LOS QUE APARECEN EN EL ARCHIVO
-        semProductorBotones = new Semaphore(45);
-        semProductorPantallas = new Semaphore(40);
-        semProductorJoysticks = new Semaphore(20);
-        semProductorSD = new Semaphore(15);
+        semProductorBotones = new Semaphore(Integer.parseInt(datos.get("almacenBotones")));
+        semProductorPantallas = new Semaphore(Integer.parseInt(datos.get("almacenPantallas")));
+        semProductorJoysticks = new Semaphore(Integer.parseInt(datos.get("almacenJoystick")));
+        semProductorSD = new Semaphore(Integer.parseInt(datos.get("almacenSD")));
         
         //ENSAMBLADORES
         semEnsambladorBotones = new Semaphore(0);
@@ -102,26 +92,26 @@ public class Simulacion {
         
         //Cantidades iniciales de productores y ensambladores
         //CAMBIAR VALORES POR EL NÚMERO QUE APARECE INDICADO EN EL ARCHIVO
-        cantPBotones = 1;
-        cantPPantallas = 1;
-        cantPJoysticks = 1;
-        cantPSD = 1;
-        cantEnsambladores = 1;
+        cantPBotones = Integer.parseInt(datos.get("productorBotonesI"));
+        cantPPantallas = Integer.parseInt(datos.get("productorPantallasI"));
+        cantPJoysticks = Integer.parseInt(datos.get("productorJoystickI"));
+        cantPSD = Integer.parseInt(datos.get("productorSDI"));
+        cantEnsambladores = Integer.parseInt(datos.get("ensambladoresI"));
         
         //Construir los arreglos de productores y ensambladores
         //CAMBIAR VALORES POR EL NÚMERO QUE APARECE INDICADO EN EL ARCHIVO
-        botones = new Productor[3];
-        pantallas = new Productor[5];
-        joysticks = new Productor[4];
-        lectoresSD = new Productor[4];
-        ensambladores = new Ensamblador[5];
+        botones = new Productor[Integer.parseInt(datos.get("productorBotonesF"))];
+        pantallas = new Productor[Integer.parseInt(datos.get("productorPantallasF"))];
+        joysticks = new Productor[Integer.parseInt(datos.get("productorJoystickF"))];
+        lectoresSD = new Productor[Integer.parseInt(datos.get("productorSDF"))];
+        ensambladores = new Ensamblador[Integer.parseInt(datos.get("ensambladoresF"))];
         
         //Llenar arreglos
         
         //BOTONES
         for (int i=0; i < botones.length; i++) {
             botones[i] = new Productor(
-                    24, //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
                     0,
                     semBotones,
                     semProductorBotones,
@@ -136,7 +126,7 @@ public class Simulacion {
         //PANTALLAS
         for (int i=0; i < pantallas.length; i++) {
             pantallas[i] = new Productor(
-                    24, //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
                     1,
                     semPantallas,
                     semProductorPantallas,
@@ -151,7 +141,7 @@ public class Simulacion {
         //JOYSTICKS
         for (int i=0; i < joysticks.length; i++) {
             joysticks[i] = new Productor(
-                    24, //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
                     2,
                     semJoysticks,
                     semProductorJoysticks,
@@ -166,7 +156,7 @@ public class Simulacion {
         //LECTORES SD
         for (int i=0; i < lectoresSD.length; i++) {
             lectoresSD[i] = new Productor(
-                    24, //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
                     3,
                     semLectoresSD,
                     semProductorSD,
@@ -181,7 +171,7 @@ public class Simulacion {
         //ENSAMBLADORES
         for (int i=0; i < ensambladores.length; i++) {
             ensambladores[i] = new Ensamblador(
-                    24, //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
                     semBotones,
                     semPantallas,
                     semJoysticks,
@@ -203,8 +193,8 @@ public class Simulacion {
         }
         
         //Crear jefe y gerente
-        jefe = new Jefe(24, semCont);
-        gerente = new Gerente(24, 15, semCont, semConsolas, almacen);
+        jefe = new Jefe(Integer.parseInt(datos.get("duracionDia")), semCont);
+        gerente = new Gerente(Integer.parseInt(datos.get("duracionDia")), 15, semCont, semConsolas, almacen);
         
         jefe.start();
         gerente.start();
@@ -261,7 +251,7 @@ public class Simulacion {
             cantidad--;
             productor[cantidad].contratado = false;
             productor[cantidad] = new Productor(
-                    24, //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
                     tipo,
                     mutexAlmacen,
                     p,
@@ -281,7 +271,7 @@ public class Simulacion {
             cantidad--;
             ensamblador[cantidad].contratado = false;
             ensamblador[cantidad] = new Ensamblador(
-                    24, //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
                     semBotones,
                     semPantallas,
                     semJoysticks,
@@ -298,6 +288,5 @@ public class Simulacion {
                     almacen
                 );
         }
->>>>>>> f037417f98354dc240d1065de230b37addd36e3b
     }
 }

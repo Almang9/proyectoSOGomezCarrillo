@@ -1,0 +1,16 @@
+contador:14
+duracionDia:24
+almacenBotones:45
+almacenSD:15
+almacenPantallas:40
+almacenJoystick:20
+productorBotonesI:1
+productorBotonesF:3
+productorPantallasI:2
+productorPantallasF:5
+productorJoystickI:3
+productorJoystickF:4
+productorSDI:1
+productorSDF:4
+ensambladoresI:1
+ensambladoresF:5
