@@ -1,11 +1,11 @@
-contador:14
+contador:17
 duracionDia:24
 almacenBotones:45
 almacenSD:15
 almacenPantallas:40
 almacenJoystick:20
 productorBotonesI:1
-productorBotonesF:3
+productorBotonesF:4
 productorPantallasI:2
 productorPantallasF:5
 productorJoystickI:3

@@ -24,14 +24,16 @@ public class Gerente extends Thread{
     Semaphore mutexAlmacen;
     //Almacén donde están todos los almacenes
     Almacen almacen;
-
-    public Gerente(int dia, int cantDias, Semaphore mutexCont, Semaphore mutexAlmacen, Almacen almacen) {
+    //Interfaz
+    Window window;
+    public Gerente(int dia, int cantDias, Semaphore mutexCont, Semaphore mutexAlmacen, Almacen almacen, Window window) {
         this.dia = dia;
         this.cantDias = cantDias;
         this.estado = "Desocupado";
         this.mutexCont = mutexCont;
         this.mutexAlmacen = mutexAlmacen;
         this.almacen = almacen;
+        this.window = window;
     }
     
     @Override
@@ -45,9 +47,11 @@ public class Gerente extends Thread{
                 mutexCont.acquire();
                 
                 this.estado = "Revisando contador...";
+                window.setGerente(this.estado);
                 //System.out.println("Gerente: " + this.estado);
                 if (Simulacion.contador == 0) {
                     this.estado = "Desplegando New 15SD XL...";
+                    window.setGerente(this.estado);
                     //System.out.println("Gerente: " + this.estado);
                     
                     //Verificar que los ensambladores no estén en el almacén
@@ -66,8 +70,9 @@ public class Gerente extends Thread{
                 mutexCont.release();
                 
                 this.estado = "Desocupado";
+                window.setGerente(this.estado);
                 //System.out.println("Gerente: " + this.estado);
-                Thread.sleep((int)(x*2*1000)); //2 horas
+                Thread.sleep((int)(x*2*100)); //2 horas
             }
             catch (InterruptedException ex) {
                 System.out.println("Ocurrió un error en Gerente.java: " + ex);

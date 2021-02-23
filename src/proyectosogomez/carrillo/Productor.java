@@ -28,14 +28,16 @@ public class Productor extends Thread{
     boolean contratado;
     //Almacen donde se guardan las piezas y las consolas terminadas
     Almacen almacen;
-
+    // Interfaz Gráfica
+    Window interfaz;
     public Productor(
             int dia,
             int tipo,
             Semaphore mutexAlmacen,
             Semaphore productor,
             Semaphore ensamblador,
-            Almacen almacen
+            Almacen almacen,
+            Window interfaz
         ) {
         this.dia = dia;
         this.tipo = tipo;
@@ -44,6 +46,7 @@ public class Productor extends Thread{
         this.ensamblador = ensamblador;
         this.contratado = true;
         this.almacen = almacen;
+        this.interfaz = interfaz;
     }
     
     @Override
@@ -55,7 +58,7 @@ public class Productor extends Thread{
                         //Verificar si hay espacio en el almacén
                         productor.acquire(2); //2 botones
                         
-                        Thread.sleep(this.dia * 1000); //1 día
+                        Thread.sleep(this.dia * 100); //1 día
                         
                         //Verificar si el almacén de botones está desocupado
                         mutexAlmacen.acquire();
@@ -64,8 +67,8 @@ public class Productor extends Thread{
                         almacen.botones = almacen.botones + 2;
                         System.out.println("Se produjeron 2 botones");
                         System.out.println("Cantidad de botones: " + almacen.botones);
-                        Window.x = Integer.toString(almacen.botones);
-                        System.out.print(Window.x);
+                        interfaz.setBotones(Integer.toString(almacen.botones));
+                        
                         mutexAlmacen.release();
                         
                         //Aumenta la cantidad de botones que hay disponibles
@@ -78,7 +81,7 @@ public class Productor extends Thread{
                         productor.acquire(2); //1 pantalla normal y 1 táctil
                         
                         //PANTALLAS NORMALES
-                        Thread.sleep(this.dia * 1000); //1 día
+                        Thread.sleep(this.dia * 100); //1 día
                         
                         //Verificar si el almacén de pantallas está desocupado
                         mutexAlmacen.acquire();
@@ -87,11 +90,11 @@ public class Productor extends Thread{
                         almacen.pantallas++;
                         System.out.println("Se produjo 1 pantalla normal");
                         System.out.println("Cantidad de pantallas normales: " + almacen.pantallas);
-                        
+                        interfaz.setPantallasN(Integer.toString(almacen.pantallas));
                         mutexAlmacen.release();
                         
                         //PANTALLAS TÁCTILES
-                        Thread.sleep(this.dia * 2 * 1000); //2 días
+                        Thread.sleep(this.dia * 2 * 100); //2 días
                         
                         //Verificar si el almacén de pantallas está desocupado
                         mutexAlmacen.acquire();
@@ -100,7 +103,7 @@ public class Productor extends Thread{
                         almacen.pantallasTactil++;
                         System.out.println("Se produjo 1 pantalla táctil");
                         System.out.println("Cantidad de pantallas táctiles: " + almacen.pantallasTactil);
-                        
+                        interfaz.setPantallasT(Integer.toString(almacen.pantallasTactil));
                         mutexAlmacen.release();
                         
                         //Aumenta la cantidad de pantallas que hay disponibles
@@ -112,7 +115,7 @@ public class Productor extends Thread{
                         //Verificar si hay espacio en el almacén
                         productor.acquire(); //1 joystick
                         
-                        Thread.sleep(this.dia * 2 * 1000); //2 días
+                        Thread.sleep(this.dia * 2 * 100); //2 días
                         
                         //Verificar si el almacén de joysticks está desocupado
                         mutexAlmacen.acquire();
@@ -121,7 +124,7 @@ public class Productor extends Thread{
                         almacen.joysticks++;
                         System.out.println("Se produjo 1 joystick");
                         System.out.println("Cantidad de joysticks: " + almacen.joysticks);
-                        
+                        interfaz.setJoysticks(Integer.toString(almacen.joysticks));
                         mutexAlmacen.release();
                         
                         //Aumenta la cantidad de joysticks que hay disponibles
@@ -133,7 +136,7 @@ public class Productor extends Thread{
                         //Verificar si hay espacio en el almacén
                         productor.acquire(); //1 lector SD
                         
-                        Thread.sleep(this.dia * 3 * 1000); //3 días
+                        Thread.sleep(this.dia * 3 * 100); //3 días
                         
                         //Verificar si el almacén de lectores SD está desocupado
                         mutexAlmacen.acquire();
@@ -142,7 +145,7 @@ public class Productor extends Thread{
                         almacen.lectoresSD++;
                         System.out.println("Se produjo 1 lector SD");
                         System.out.println("Cantidad de lectores SD: " + almacen.lectoresSD);
-                        
+                        interfaz.setTarjetasSD(Integer.toString(almacen.lectoresSD));
                         mutexAlmacen.release();
                         
                         //Aumenta la cantidad de lectores SD que hay disponibles

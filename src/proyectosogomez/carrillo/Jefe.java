@@ -18,11 +18,13 @@ public class Jefe extends Thread{
     String estado;
     //Semáforo para verificar que nadie está accediendo al contador
     Semaphore mutexCont;
-
-    public Jefe(int dia, Semaphore mutexCont) {
+    //Interfaz
+    Window window;
+    public Jefe(int dia, Semaphore mutexCont, Window window) {
         this.dia = dia;
         this.estado = "Desocupado";
         this.mutexCont = mutexCont;
+        this.window = window;
     }
     
     @Override
@@ -33,21 +35,24 @@ public class Jefe extends Thread{
         while (true) {
             try {
                 //System.out.println("Jefe: " + this.estado);
-                Thread.sleep((int)((this.dia - (x*6)) * 1000)); //24 horas - 6 horas
+                Thread.sleep((int)((this.dia - (x*6)) * 100)); //24 horas - 6 horas
                 
                 //Verificar que el gerente no ha accedido al contador.
                 mutexCont.acquire();
                 
                 if (Simulacion.contador > 0) {
                     this.estado = "Modificando contador...";
+                    window.setJefe(estado);
                     //System.out.println("Jefe: " + this.estado);
-                    Thread.sleep((int)(x*6*1000)); //6 horas
+                    Thread.sleep((int)(x*6*100)); //6 horas
                     Simulacion.contador--;
                     System.out.println("Días restantes: " + Simulacion.contador);
+                    window.setDays(Integer.toString(Simulacion.contador));
                 }
                 
                 mutexCont.release();
                 this.estado = "Desocupado";
+                window.setJefe(estado);
                 
             }
             catch (InterruptedException ex) {

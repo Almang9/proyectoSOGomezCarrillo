@@ -12,9 +12,7 @@ package proyectosogomez.carrillo;
 public class main {
     
     public static void main(String[] args) {
- //       Simulacion s = new Simulacion();
-       Window w = new Window();
-       w.setLocationRelativeTo(null);
-       w.setVisible(true);
+        Inicio s = new Inicio();
+        
     }
 }

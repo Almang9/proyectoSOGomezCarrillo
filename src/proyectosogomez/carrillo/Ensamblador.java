@@ -26,7 +26,8 @@ public class Ensamblador extends Thread{
     boolean contratado;
     //Almacen donde se guardan las piezas y las consolas terminadas
     Almacen almacen;
-
+    // Interfaz
+    Window window;
     public Ensamblador(
             int dia,
             Semaphore mutexBotones,
@@ -42,7 +43,8 @@ public class Ensamblador extends Thread{
             Semaphore ePantallas,
             Semaphore eJoysticks,
             Semaphore eSD,
-            Almacen almacen
+            Almacen almacen,
+            Window window
         ) {
         this.dia = dia;
         this.mutexBotones = mutexBotones;
@@ -60,6 +62,7 @@ public class Ensamblador extends Thread{
         this.eSD = eSD;
         this.contratado = true;
         this.almacen = almacen;
+        this.window = window;
     }
     
     public void run() {
@@ -76,7 +79,7 @@ public class Ensamblador extends Thread{
                 almacen.botones = almacen.botones - 5;
                 System.out.println("Se han tomado 5 botones del almacén");
                 System.out.println("Cantidad de botones: " + almacen.botones);
-                
+                window.setBotones(Integer.toString(almacen.botones));
                 mutexBotones.release();
                 
                 pBotones.release(5);
@@ -93,12 +96,12 @@ public class Ensamblador extends Thread{
                 almacen.pantallas--;
                 System.out.println("Se ha tomado 1 pantalla normal del almacén");
                 System.out.println("Cantidad de pantallas normales: " + almacen.pantallas);
-                
+                window.setPantallasN(Integer.toString(almacen.pantallas));
                 //PANTALLAS TÁCTILES
                 almacen.pantallasTactil--;
                 System.out.println("Se ha tomado 1 pantalla táctil del almacén");
                 System.out.println("Cantidad de pantallas táctiles: " + almacen.pantallasTactil);
-                
+                window.setPantallasT(Integer.toString(almacen.pantallasTactil));
                 mutexPantallas.release();
                 
                 pPantallas.release(2);
@@ -114,7 +117,7 @@ public class Ensamblador extends Thread{
                 almacen.joysticks = almacen.joysticks - 2;
                 System.out.println("Se han tomado 2 joysticks del almacén");
                 System.out.println("Cantidad de joysticks: " + almacen.joysticks);
-                
+                window.setJoysticks(Integer.toString(almacen.joysticks));
                 mutexJoysticks.release();
                 
                 pJoysticks.release(2);
@@ -130,7 +133,7 @@ public class Ensamblador extends Thread{
                 almacen.lectoresSD--;
                 System.out.println("Se han tomado 1 lector SD del almacén");
                 System.out.println("Cantidad de lectores SD: " + almacen.lectoresSD);
-                
+                window.setTarjetasSD(Integer.toString(almacen.lectoresSD));
                 mutexSD.release();
                 
                 pSD.release();
@@ -145,7 +148,7 @@ public class Ensamblador extends Thread{
                 almacen.consolas++;
                 System.out.println("Se ha fabricado 1 consola New 15SD XL");
                 System.out.println("Cantidad de consolas: " + almacen.consolas);
-                
+                window.setConsolas(Integer.toString(almacen.consolas));
                 mutexConsolas.release();
             }
             catch (InterruptedException ex) {
