@@ -254,24 +254,45 @@ public class Simulacion {
         }
     }
     public void contratarPBotones(){
-    this.contratar(this.botones,this.cantPBotones);
-    System.out.println("La cantidad de productores de botones que hay es " + this.cantPBotones);
-    System.out.println("El productor" + this.cantPBotones +"esta contratado: " +this.botones[this.cantPBotones].contratado);
+    if (this.cantPBotones < this.botones.length) {
+            this.botones[this.cantPBotones].start();            
+            this.cantPBotones++;
+            System.out.println("La cantidad de PRODUCTORES DE BOTONES a cambiado a " + Integer.toString(this.cantPBotones));
+            System.out.println("La variable CANTIDAD DE BOTONES es de: " + this.cantPBotones);
+            System.out.println("Botones");           
+            window.setProductorB(Integer.toString(this.cantPBotones));            
     }
+    }
+    
     public void contratarPPantalla(){
-    this.contratar(this.pantallas,this.cantPPantallas);
-    System.out.println("La cantidad de productores de botones que hay es " + this.cantPBotones);
-    System.out.println("El productor " + (this.cantPPantallas +1) +" esta contratado: " +this.pantallas[this.cantPPantallas+1].contratado);
+    if (this.cantPPantallas < this.pantallas.length) {
+            this.pantallas[this.cantPPantallas].start();            
+            this.cantPPantallas++;
+            System.out.println("La cantidad de PRODUCTORES DE Pantallas a cambiado a " + Integer.toString(this.cantPPantallas));
+            System.out.println("La variable CANTIDAD DE PANTALLAS es de: " + this.cantPPantallas);
+            System.out.println("Botones");           
+            window.setProductorPantallas(Integer.toString(this.cantPPantallas));            
+    }
             }
     public void contratarPJoystick(){
-    this.contratar(this.joysticks,this.cantPJoysticks);
-    System.out.println("La cantidad de productores de botones que hay es " + this.cantPJoysticks);
-    System.out.println("El productor" + this.cantPJoysticks +"esta contratado: " +this.joysticks[this.cantPJoysticks].contratado);
+    if (this.cantPJoysticks < this.joysticks.length) {
+            this.joysticks[this.cantPJoysticks].start();            
+            this.cantPJoysticks++;
+            System.out.println("La cantidad de PRODUCTORES DE JOYSTICKS a cambiado a " + Integer.toString(this.cantPJoysticks));
+            System.out.println("La variable CANTIDAD DE JOYSTICKS es de: " + this.cantPJoysticks);
+            System.out.println("Joysticks");           
+            window.setProductorJoystick(Integer.toString(this.cantPJoysticks));            
+    }
     }
     public void contratarPSD(){
-    this.contratar(this.lectoresSD, this.cantPSD);
-    System.out.println("La cantidad de productores de botones que hay es " + this.cantPSD);
-    System.out.println("El productor" + this.cantPSD +"esta contratado: " +this.lectoresSD[this.cantPSD].contratado);
+    if (this.cantPSD < this.lectoresSD.length) {
+            this.lectoresSD[this.cantPSD].start();            
+            this.cantPSD++;
+            System.out.println("La cantidad de PRODUCTORES DE LECTORES SD a cambiado a " + Integer.toString(this.cantPSD));
+            System.out.println("La variable CANTIDAD DE LECTORES SD es de: " + this.cantPSD);
+            System.out.println("Tarjetas SD");           
+            window.setProductorSD(Integer.toString(this.cantPSD));            
+    }
     }
     //Contratar ensamblador
 
@@ -288,7 +309,11 @@ public class Simulacion {
         }
     }
     public void contratarEnsamblador(){
-    contratar(this.ensambladores,this.cantEnsambladores);
+    if (this.cantEnsambladores < this.ensambladores.length) {
+            this.ensambladores[this.cantEnsambladores].start();
+            this.cantEnsambladores++;
+            window.setEnsambladores(Integer.toString(this.cantEnsambladores));
+        }
     }
     //Despedir ensamblador
 
@@ -326,25 +351,79 @@ public class Simulacion {
     }
     
     public void despedirB(){
-    despedir(this.botones,this.cantPBotones,0,this.semBotones,this.semProductorBotones,this.semEnsambladorBotones);
-    this.cantPBotones--;
+    if (this.cantPBotones > 0) {
+            this.cantPBotones--;
+            
+            this.botones[this.cantPBotones].contratado = false;
+            this.botones[this.cantPBotones] = new Productor(
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    0,
+                    this.semBotones,
+                    this.semProductorBotones,
+                    this.semEnsambladorBotones,
+                    almacen,
+                    window
+                );
+        }
     System.out.println("LA CANTIDAD DE PRODUCTORES DE BOTONES ES: "+ this.cantPBotones);
     System.out.println("EL PRODUCTOR " + this.cantPBotones + " ESTA CONTRATADO: "+ this.botones[this.cantPBotones].contratado);
     window.setProductorB(Integer.toString(this.cantPBotones));
     }
     public void despedirPantalla(){
-    despedir(this.pantallas,this.cantPPantallas,1,this.semPantallas,this.semProductorPantallas,this.semEnsambladorPantallas);
-    this.cantPPantallas--;
+    if (this.cantPPantallas > 0) {
+            this.cantPPantallas--;
+            
+            this.pantallas[this.cantPPantallas].contratado = false;
+            this.pantallas[this.cantPPantallas] = new Productor(
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    1,
+                    this.semPantallas,
+                    this.semProductorPantallas,
+                    this.semEnsambladorPantallas,
+                    almacen,
+                    window
+                );
+        }
+    System.out.println("LA CANTIDAD DE PRODUCTORES DE PANTALLAS ES: "+ this.cantPPantallas);
+    System.out.println("EL PRODUCTOR " + this.cantPPantallas + " ESTA CONTRATADO: "+ this.pantallas[this.cantPPantallas].contratado);
     window.setProductorPantallas(Integer.toString(this.cantPPantallas));
     }
     public void despedirJoystick(){
-    despedir(this.joysticks,this.cantPJoysticks,2,this.semJoysticks,this.semProductorJoysticks,this.semEnsambladorJoysticks);
-    this.cantPJoysticks--;
+    if (this.cantPJoysticks > 0) {
+            this.cantPJoysticks--;
+            
+            this.joysticks[this.cantPJoysticks].contratado = false;
+            this.joysticks[this.cantPJoysticks] = new Productor(
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    2,
+                    this.semJoysticks,
+                    this.semProductorJoysticks,
+                    this.semEnsambladorJoysticks,
+                    almacen,
+                    window
+                );
+        }
+    System.out.println("LA CANTIDAD DE PRODUCTORES DE JOYSTICKS ES: "+ this.cantPJoysticks);
+    System.out.println("EL PRODUCTOR " + this.cantPJoysticks + " ESTA CONTRATADO: "+ this.joysticks[this.cantPJoysticks].contratado);
     window.setProductorJoystick(Integer.toString(this.cantPJoysticks));
     }
     public void despedirSD(){        
-    despedir(this.lectoresSD,this.cantPSD,3,this.semLectoresSD,this.semProductorSD,this.semEnsambladorSD);
-    this.cantPSD--;
+    if (this.cantPSD > 0) {
+            this.cantPSD--;
+            
+            this.lectoresSD[this.cantPSD].contratado = false;
+            this.lectoresSD[this.cantPSD] = new Productor(
+                    Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
+                    2,
+                    this.semLectoresSD,
+                    this.semProductorSD,
+                    this.semEnsambladorSD,
+                    almacen,
+                    window
+                );
+        }
+    System.out.println("LA CANTIDAD DE PRODUCTORES DE JOYSTICKS ES: "+ this.cantPSD);
+    System.out.println("EL PRODUCTOR " + this.cantPSD + " ESTA CONTRATADO: "+ this.lectoresSD[this.cantPSD].contratado);
     window.setProductorSD(Integer.toString(this.cantPSD));
     }
     /**
@@ -352,12 +431,12 @@ public class Simulacion {
      * @param ensamblador -> Arreglo de ensambladores
      * @param cantidad -> Cantidad de ensambladores trabajando actualmente
      */
-    public void despedir(Ensamblador[] ensamblador, int cantidad) {
-        if (cantidad > 0) {
-            cantidad--;
-            window.setEnsambladores(Integer.toString(cantidad));
-            ensamblador[cantidad].contratado = false;
-            ensamblador[cantidad] = new Ensamblador(
+    public void despedirEnsambladores() {
+        if (this.cantEnsambladores > 0) {
+            this.cantEnsambladores--;
+            window.setEnsambladores(Integer.toString(this.cantEnsambladores));
+            this.ensambladores[this.cantEnsambladores].contratado = false;
+            this.ensambladores[this.cantEnsambladores] = new Ensamblador(
                     Integer.parseInt(datos.get("duracionDia")), //CAMBIAR VALOR POR EL QUE APARECE EN EL ARCHIVO
                     semBotones,
                     semPantallas,

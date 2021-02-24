@@ -35,7 +35,7 @@ public class Jefe extends Thread{
         while (true) {
             try {
                 //System.out.println("Jefe: " + this.estado);
-                Thread.sleep((int)((this.dia - (x*6)) * 100)); //24 horas - 6 horas
+                Thread.sleep((int)((this.dia - (x*6)) * 1000)); //24 horas - 6 horas
                 
                 //Verificar que el gerente no ha accedido al contador.
                 mutexCont.acquire();

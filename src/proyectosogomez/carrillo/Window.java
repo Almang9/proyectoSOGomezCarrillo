@@ -110,7 +110,7 @@ public static volatile String x = "Test";
         DespedirPPantalla = new javax.swing.JButton();
         DespedirPSD = new javax.swing.JButton();
         despedirJoystick = new javax.swing.JButton();
-        Start10 = new javax.swing.JButton();
+        despedirEnsambladores = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         consolas = new javax.swing.JLabel();
 
@@ -129,7 +129,7 @@ public static volatile String x = "Test";
         jLabel4.setText("JoySticks:");
 
         jLabel5.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
-        jLabel5.setText("TarjetasSD:");
+        jLabel5.setText("Lectores SD:");
 
         jLabel6.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jLabel6.setText("PantallasN:");
@@ -213,7 +213,7 @@ public static volatile String x = "Test";
         });
 
         jLabel15.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
-        jLabel15.setText("TarjetasSD:");
+        jLabel15.setText("Lectores SD:");
 
         productorSD.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         productorSD.setText("0");
@@ -266,10 +266,10 @@ public static volatile String x = "Test";
             }
         });
 
-        Start10.setText("Despedir");
-        Start10.addActionListener(new java.awt.event.ActionListener() {
+        despedirEnsambladores.setText("Despedir");
+        despedirEnsambladores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Start10ActionPerformed(evt);
+                despedirEnsambladoresActionPerformed(evt);
             }
         });
 
@@ -293,7 +293,7 @@ public static volatile String x = "Test";
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(0, 690, Short.MAX_VALUE)
+                                                .addGap(0, 683, Short.MAX_VALUE)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
                                                     .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -362,7 +362,7 @@ public static volatile String x = "Test";
                                             .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addComponent(Start1)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(Start10)))))
+                                                .addComponent(despedirEnsambladores)))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel12)
                                 .addGap(49, 49, 49))))
@@ -428,7 +428,7 @@ public static volatile String x = "Test";
                         .addGap(10, 10, 10)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Start1)
-                            .addComponent(Start10))
+                            .addComponent(despedirEnsambladores))
                         .addGap(1, 1, 1)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
@@ -527,9 +527,10 @@ public static volatile String x = "Test";
         s.despedirJoystick();
     }//GEN-LAST:event_despedirJoystickActionPerformed
 
-    private void Start10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Start10ActionPerformed
+    private void despedirEnsambladoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_despedirEnsambladoresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Start10ActionPerformed
+        s.despedirEnsambladores();
+    }//GEN-LAST:event_despedirEnsambladoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -572,12 +573,12 @@ public static volatile String x = "Test";
     private javax.swing.JButton DespedirPPantalla;
     private javax.swing.JButton DespedirPSD;
     private javax.swing.JButton Start1;
-    private javax.swing.JButton Start10;
     private javax.swing.JLabel botones;
     private javax.swing.JLabel consolas;
     private javax.swing.JButton contrararPpantallas;
     private javax.swing.JButton contratarPJoystick;
     private javax.swing.JButton contratarPSD;
+    private javax.swing.JButton despedirEnsambladores;
     private javax.swing.JButton despedirJoystick;
     private javax.swing.JLabel dias;
     private javax.swing.JLabel ensambladores;

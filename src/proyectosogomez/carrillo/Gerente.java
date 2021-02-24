@@ -45,7 +45,7 @@ public class Gerente extends Thread{
             try {
                 //Verificar que el jefe no ha accedido al contador
                 mutexCont.acquire();
-                
+                 
                 this.estado = "Revisando contador...";
                 window.setGerente(this.estado);
                 //System.out.println("Gerente: " + this.estado);

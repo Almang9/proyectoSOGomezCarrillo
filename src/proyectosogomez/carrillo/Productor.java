@@ -58,7 +58,7 @@ public class Productor extends Thread{
                         //Verificar si hay espacio en el almacén
                         productor.acquire(2); //2 botones
                         
-                        Thread.sleep(this.dia * 100); //1 día
+                        Thread.sleep(this.dia * 1000); //1 día
                         
                         //Verificar si el almacén de botones está desocupado
                         mutexAlmacen.acquire();
@@ -81,7 +81,7 @@ public class Productor extends Thread{
                         productor.acquire(2); //1 pantalla normal y 1 táctil
                         
                         //PANTALLAS NORMALES
-                        Thread.sleep(this.dia * 100); //1 día
+                        Thread.sleep(this.dia * 1000); //1 día
                         
                         //Verificar si el almacén de pantallas está desocupado
                         mutexAlmacen.acquire();
@@ -94,7 +94,7 @@ public class Productor extends Thread{
                         mutexAlmacen.release();
                         
                         //PANTALLAS TÁCTILES
-                        Thread.sleep(this.dia * 2 * 100); //2 días
+                        Thread.sleep(this.dia * 2 * 1000); //2 días
                         
                         //Verificar si el almacén de pantallas está desocupado
                         mutexAlmacen.acquire();
@@ -115,7 +115,7 @@ public class Productor extends Thread{
                         //Verificar si hay espacio en el almacén
                         productor.acquire(); //1 joystick
                         
-                        Thread.sleep(this.dia * 2 * 100); //2 días
+                        Thread.sleep(this.dia * 2 * 1000); //2 días
                         
                         //Verificar si el almacén de joysticks está desocupado
                         mutexAlmacen.acquire();
@@ -136,7 +136,7 @@ public class Productor extends Thread{
                         //Verificar si hay espacio en el almacén
                         productor.acquire(); //1 lector SD
                         
-                        Thread.sleep(this.dia * 3 * 100); //3 días
+                        Thread.sleep(this.dia * 3 * 1000); //3 días
                         
                         //Verificar si el almacén de lectores SD está desocupado
                         mutexAlmacen.acquire();

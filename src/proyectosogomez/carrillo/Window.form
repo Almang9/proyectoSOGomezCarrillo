@@ -48,7 +48,7 @@
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
-                                                  <EmptySpace min="0" pref="690" max="32767" attributes="0"/>
+                                                  <EmptySpace min="0" pref="683" max="32767" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="jLabel15" alignment="1" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -139,7 +139,7 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="Start1" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="Start10" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="despedirEnsambladores" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -229,7 +229,7 @@
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="Start1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Start10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="despedirEnsambladores" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -323,7 +323,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Narrow" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="TarjetasSD:"/>
+            <Property name="text" type="java.lang.String" value="Lectores SD:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
@@ -515,7 +515,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Narrow" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="TarjetasSD:"/>
+            <Property name="text" type="java.lang.String" value="Lectores SD:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="productorSD">
@@ -590,12 +590,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="despedirJoystickActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Start10">
+        <Component class="javax.swing.JButton" name="despedirEnsambladores">
           <Properties>
             <Property name="text" type="java.lang.String" value="Despedir"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Start10ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="despedirEnsambladoresActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel17">

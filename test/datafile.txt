@@ -1,4 +1,4 @@
-contador:17
+contador:24
 duracionDia:24
 almacenBotones:45
 almacenSD:15
