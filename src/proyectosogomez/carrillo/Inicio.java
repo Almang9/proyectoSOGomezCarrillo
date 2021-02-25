@@ -90,6 +90,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         config = new Configuracion();
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class Configuracion extends javax.swing.JFrame {
  Inicio inicio;
- Archivo archivo;
+ Archivo archivo = new Archivo();
     /**
      * Creates new form Configuración
      */
@@ -204,7 +204,7 @@ public class Configuracion extends javax.swing.JFrame {
 
         jLabel17.setText("Productor de  Joysticks:");
 
-        jLabel18.setText("Productor de  Joysticks:");
+        jLabel18.setText("Productor de  Pantallas:");
 
         jLabel19.setText("Ensambladores:");
 
@@ -215,7 +215,12 @@ public class Configuracion extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Restaurar Configuración Estándar");
+        jButton2.setText("Regresar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -304,11 +309,13 @@ public class Configuracion extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton1)
-                            .addComponent(jButton2)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addGap(153, 153, 153)
-                                .addComponent(jLabel9)))))
+                                .addComponent(jLabel9))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButton2)
+                                .addGap(30, 30, 30)))))
                 .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
@@ -465,7 +472,6 @@ public class Configuracion extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        try {
-       Map <String,String> config = null;
        int cont = Integer.parseInt(contador.getText());
        int duracion = Integer.parseInt(duracionDia.getText());
        int capPantalla =Integer.parseInt(almacenPantallas.getText());
@@ -497,7 +503,7 @@ public class Configuracion extends javax.swing.JFrame {
            acceptable = false;
            JOptionPane.showMessageDialog(null, "Los limites de los productores de pantallas no son aceptables");
        }
-       if(capJoystick < 5 || capBotones < 5 || capSD < 5 || capPantalla < 5){
+       if(capJoystick < 2 || capBotones < 6 || capSD < 1 || capPantalla < 2){
            acceptable = false;
            JOptionPane.showMessageDialog(null, "Capacidad de almacenamiento inválida, se debe poder almacernar lo suficiente como para poder ensamblar una consola");
        }
@@ -510,31 +516,54 @@ public class Configuracion extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "cantidad de días niválida, no puede ser negativo o nulo");
        }
        if (acceptable){
-       config.put("contador", contador.getText());
-       config.put("duracionDia", duracionDia.getText());
-       config.put("almacenBotones", almacenBotones.getText());
-       config.put("almacenPantallas", almacenPantallas.getText());
-       config.put("almacenJoystick", almacenJoystick.getText());
-       config.put("productorBotonesI", productorBotonesI.getText());
-       config.put("productorBotonesF", productorBotonesF.getText());
-       config.put("productorPantallasI", productorPantallasI.getText());
-       config.put("productorPantallasF", productorPantallasF.getText());
-       config.put("productorJoystickI", productorJoystickI.getText());
-       config.put("productorJoystickF", productorJoystickF.getText());
-       config.put("productorSDI", productorSDI.getText());
-       config.put("productorSDF", productorSDF.getText());
-       config.put("ensambladoresI", ensambladoresI.getText());
-       config.put("ensambladoresF", ensambladoresF.getText());
-       archivo.saveDatafile(config);
+       String contadortext = contador.getText();
+       String duracionDiatext = duracionDia.getText();
+       String almacenBotonestext = almacenBotones.getText();
+       String almacenPantallastext = almacenPantallas.getText();
+       String almacenJoysticktext = almacenJoystick.getText();
+       String almacenSDtext = almacenSD.getText();
+       String productorBotonesItext =productorBotonesI.getText();
+       String productorBotonesFtext = productorBotonesF.getText();
+       String productorPantallasItext = productorPantallasI.getText();
+       String productorPantallasFtext = productorPantallasF.getText();
+       String productorJoystickItext = productorJoystickI.getText();
+       String productorJoystickFtext = productorJoystickF.getText();
+       String productorSDItext = productorSDI.getText();
+       String productorSDFtext = productorSDF.getText();
+       String ensambladoresItext = ensambladoresI.getText();
+       String ensambladoresFtext = ensambladoresF.getText();
+       archivo.saveDatafile(duracionDiatext,
+               contadortext,
+               almacenBotonestext,
+               almacenPantallastext,
+               almacenJoysticktext,
+               almacenSDtext,
+               productorBotonesItext,
+               productorBotonesFtext,
+               productorPantallasItext,
+               productorPantallasFtext,
+               productorJoystickItext,
+               productorJoystickFtext,
+               productorSDItext,
+               productorSDFtext,
+               ensambladoresItext,
+               ensambladoresFtext
+               );
        }
        
        }
        catch(NumberFormatException e){
-       JOptionPane.showMessageDialog(null, "Por favor, solo introduzca números enteros positivos");
-       }        
-        this.setVisible(false);
+       JOptionPane.showMessageDialog(null, "Por favor, recuerde no incluir letras ni simbolos, solo números");
+       }
+       this.setVisible(false);
        inicio = new Inicio();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Inicio inicio = new Inicio();
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

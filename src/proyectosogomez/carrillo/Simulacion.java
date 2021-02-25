@@ -67,6 +67,17 @@ public class Simulacion {
         window = new Window(this);
         window.setLocationRelativeTo(null);
         window.setVisible(true);
+        window.setMaxcapacity(
+                datos.get("almacenBotones"),
+                datos.get("almacenPantallas"),
+                datos.get("almacenPantallas"), 
+                datos.get("almacenJoystick"),
+                datos.get("almacenSD"),
+                datos.get("productorBotonesF"),
+                datos.get("productorJoystickF"),
+                datos.get("productorPantallasF"),
+                datos.get("productorSDF"),
+                datos.get("ensambladoresF"));
         window.setProductorB(datos.get("productorBotonesI"));
         window.setProductorJoystick(datos.get("productorJoystickI"));
         window.setProductorPantallas(datos.get("productorPantallasI"));
@@ -210,7 +221,7 @@ public class Simulacion {
         
         //Crear jefe y gerente
         jefe = new Jefe(Integer.parseInt(datos.get("duracionDia")), semCont,window);
-        gerente = new Gerente(Integer.parseInt(datos.get("duracionDia")), 15, semCont, semConsolas, almacen,window);
+        gerente = new Gerente(Integer.parseInt(datos.get("duracionDia")), Integer.parseInt(datos.get("contador")), semCont, semConsolas, almacen,window);
         
         jefe.start();
         gerente.start();
@@ -286,7 +297,7 @@ public class Simulacion {
     }
     public void contratarPSD(){
     if (this.cantPSD < this.lectoresSD.length) {
-            this.lectoresSD[this.cantPSD].start();            
+            this.lectoresSD[this.cantPSD].start();
             this.cantPSD++;
             System.out.println("La cantidad de PRODUCTORES DE LECTORES SD a cambiado a " + Integer.toString(this.cantPSD));
             System.out.println("La variable CANTIDAD DE LECTORES SD es de: " + this.cantPSD);

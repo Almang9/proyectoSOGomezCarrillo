@@ -134,13 +134,14 @@ public class Ensamblador extends Thread{
                 System.out.println("Se han tomado 1 lector SD del almacén");
                 System.out.println("Cantidad de lectores SD: " + almacen.lectoresSD);
                 window.setTarjetasSD(Integer.toString(almacen.lectoresSD));
+                //ENSAMBLAJE
+                
+                Thread.sleep(dia * 1000); //1 dia
                 mutexSD.release();
                 
                 pSD.release();
                 
-                //ENSAMBLAJE
                 
-                Thread.sleep(dia * 1000); //1 dia
                 
                 //Verificar que el almacen de consolas está desocupado
                 mutexConsolas.acquire();

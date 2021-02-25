@@ -45,10 +45,10 @@ public class Gerente extends Thread{
             try {
                 //Verificar que el jefe no ha accedido al contador
                 mutexCont.acquire();
-                 
+                
                 this.estado = "Revisando contador...";
                 window.setGerente(this.estado);
-                //System.out.println("Gerente: " + this.estado);
+                // System.out.println("Gerente: " + this.estado);
                 if (Simulacion.contador == 0) {
                     this.estado = "Desplegando New 15SD XL...";
                     window.setGerente(this.estado);
@@ -58,11 +58,12 @@ public class Gerente extends Thread{
                     mutexAlmacen.acquire();
                     
                     almacen.consolas = 0;
-                    
+                    window.setConsolas(Integer.toString(this.almacen.consolas));
                     mutexAlmacen.release();
                     
                     //Reinicializar contador de días
                     Simulacion.contador = this.cantDias;
+                    window.setDays(Integer.toString(this.cantDias));
                 }
                 
                 //System.out.println("Días restantes: " + Simulacion.contador);
@@ -71,8 +72,8 @@ public class Gerente extends Thread{
                 
                 this.estado = "Desocupado";
                 window.setGerente(this.estado);
-                //System.out.println("Gerente: " + this.estado);
-                Thread.sleep((int)(x*2*100)); //2 horas
+               
+                Thread.sleep((int)(x*2*1000)); //2 horas
             }
             catch (InterruptedException ex) {
                 System.out.println("Ocurrió un error en Gerente.java: " + ex);

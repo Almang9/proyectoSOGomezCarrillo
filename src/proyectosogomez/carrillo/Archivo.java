@@ -27,28 +27,30 @@ public class Archivo {
 String path = "test\\datafile.txt";
 String line;
 String text= "";
-String[] keys = {
-    "contador",
-    "duracionDia",
-    "almacenBotones",
-    "almacenPantallas",
-    "almacenJoystick",
-    "productorBotonesI",
-    "productorBotonesF",
-    "productorPantallasI",
-    "productorPantallasF",
-    "pruductorJoystickI",
-    "productorJoystickF",
-    "productorSDI",
-    "productorSDF",
-    "ensambladoresI",
-    "ensambladoresF"};
+String[][] keys = {
+    {"contador", "0"},
+    {"duracionDia", "1"},
+    {"almacenBotones", "6"},
+    {"almacenPantallas","2"},
+    {"almacenJoystick","2"},
+    {"almacenSD","1"},
+    {"productorBotonesI","0"},
+    {"productorBotonesF","0"},
+    {"productorPantallasI","0"},
+    {"productorPantallasF","0"},
+    {"productorJoystickI","0"},
+    {"productorJoystickF","0"},
+    {"productorSDI","0"},
+    {"productorSDF","0"},
+    {"ensambladoresI","0"},
+    {"ensambladoresF","0"}};
 String[][] defaultOpt = {{"contador","14"},
     {"duracionDia","24"},
     {"almacenBotones","45"},
     {"almacenSD","15"},
     {"almacenPantallas","40"},
     {"almacenJoystick","20"},
+    {"almacenSD","15" },
     {"productorBotonesI","1"},
     {"productorBotonesF","3"},
     {"productorPantallasI","2"},
@@ -89,16 +91,18 @@ Map<String, String> dictionary;
             }
         }
         br.close();
-        if(!"".equals(text) && !text.isEmpty()){
         String[] text_split = text.split("\n");
-        System.out.println("It WORKS");
-        for (int i = 0; i < text_split.length; i++) {
+        if(!"".equals(text) && !text.isEmpty() && checkDatafile(text_split) ){
+        
+        
+        for (int i = 0; i < defaultOpt.length; i++) {
             dictionary.put(text_split[i].split(":")[0],text_split[i].split(":")[1]);
-        }
+        }        
         }else{
-        parameters = defaultOpt;
+            text = "";
+        this.parameters = this.defaultOpt;
             for (String[] defaultOpt1 : defaultOpt) {
-                dictionary.put(defaultOpt1[0], defaultOpt1[1]);
+                this.dictionary.put(defaultOpt1[0], defaultOpt1[1]);
                 text += defaultOpt1[0] + ":" + defaultOpt1[1] + "\n";                
                 System.out.println(Arrays.toString(defaultOpt1));
             }
@@ -117,12 +121,72 @@ Map<String, String> dictionary;
      }
     
 }
-    public void saveDatafile(Map<String,String> dictionary){
+    public boolean checkDatafile(String[] file){        
+        //* Esta función revida que los datos obtenidos del archivo estén correctamente formateados               
+        String field;
         String value;
-     for (String key : keys) {
-         value = dictionary.get(key);
-         text += key + ":" + value + "\n";
-     }     
+        String[] splitFile;
+        try{
+            //Comprobando que el archivo tiene todos los campos necesarios
+            if(file.length != 16){
+                return false;
+            }
+            for(int i = 0; i < file.length; i++){
+                splitFile = file[i].split(":");
+                field = splitFile[0];
+                value = splitFile[1];      
+                //Comprobando que el archivo tiene todos los campos definidos correctamente
+                // Comprobando que el archivo tenga valores que no son menores al límite
+                if(!(field.equals(keys[i][0]) && Integer.parseInt(value)< Integer.parseInt(keys[i][1]))){
+                return false;
+                }
+            }
+            return true;
+        }
+        catch(Exception e){
+            return false;}
+        }
+        
+        
+    
+    public void saveDatafile(String duracionDia,
+            String contador, 
+            String almacenBotones, 
+            String almacenPantallas,
+            String almacenJoystick,
+            String almacenSD,
+            String productorBotonesI,
+            String productorBotonesF,
+            String productorPantallasI,
+            String productorPantallasF, 
+            String productorJoystickI, 
+            String productorJoystickF, 
+            String productorSDI, 
+            String productorSDF, 
+            String ensambladoresI, 
+            String ensambladoresF){      
+        String[] values={
+    contador,
+    duracionDia,
+    almacenBotones,
+    almacenPantallas,
+    almacenJoystick,
+    almacenSD,
+    productorBotonesI,
+    productorBotonesF,
+    productorPantallasI,
+    productorPantallasF,
+    productorJoystickI,
+    productorJoystickF,
+    productorSDI,
+    productorSDF,
+    ensambladoresI,
+    ensambladoresF};
+      text = "";
+     for (int i = 0; i<keys.length; i++)
+     {
+         text += keys[i][0]+ ":"+ values[i] + "\n";
+     }
         try{
     PrintWriter pw = new PrintWriter("test\\datafile.txt");
     pw.print(text);
