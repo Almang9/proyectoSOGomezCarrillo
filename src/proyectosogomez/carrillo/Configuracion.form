@@ -379,7 +379,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="12" style="2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="CAPACIDAD M&#xc4;XIMA DE PERSONAL:"/>
+            <Property name="text" type="java.lang.String" value="CAPACIDAD M&#xc1;XIMA DE PERSONAL:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel21">
@@ -387,7 +387,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="12" style="2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="CAPACIDAD M&#xc4;XIMA DEL ALMACEN:"/>
+            <Property name="text" type="java.lang.String" value="CAPACIDAD M&#xc1;XIMA DEL ALMAC&#xc9;N:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -411,7 +411,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Narrow" size="12" style="2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="botones:"/>
+            <Property name="text" type="java.lang.String" value="Botones:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel23">
@@ -523,7 +523,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Narrow" size="12" style="2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="D&#xed;as"/>
+            <Property name="text" type="java.lang.String" value="d&#xed;as"/>
           </Properties>
         </Component>
       </SubComponents>

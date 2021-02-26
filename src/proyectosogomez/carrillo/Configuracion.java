@@ -195,10 +195,10 @@ public class Configuracion extends javax.swing.JFrame {
         });
 
         jLabel20.setFont(new java.awt.Font("Arial Black", 2, 12)); // NOI18N
-        jLabel20.setText("CAPACIDAD MÄXIMA DE PERSONAL:");
+        jLabel20.setText("CAPACIDAD MÁXIMA DE PERSONAL:");
 
         jLabel21.setFont(new java.awt.Font("Arial Black", 2, 12)); // NOI18N
-        jLabel21.setText("CAPACIDAD MÄXIMA DEL ALMACEN:");
+        jLabel21.setText("CAPACIDAD MÁXIMA DEL ALMACÉN:");
 
         jLabel3.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
         jLabel3.setText("segundos");
@@ -207,7 +207,7 @@ public class Configuracion extends javax.swing.JFrame {
         jLabel9.setText("Productor de  Pantallas:");
 
         jLabel22.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
-        jLabel22.setText("botones:");
+        jLabel22.setText("Botones:");
 
         jLabel23.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
         jLabel23.setText("Tarjetas SD:");
@@ -249,7 +249,7 @@ public class Configuracion extends javax.swing.JFrame {
         jLabel34.setText("Productor de Botones:");
 
         jLabel4.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
-        jLabel4.setText("Días");
+        jLabel4.setText("días");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -491,7 +491,7 @@ public class Configuracion extends javax.swing.JFrame {
             }
             if(cont <= 0){
                 acceptable = false;
-                JOptionPane.showMessageDialog(null, "cantidad de días niválida, no puede ser negativo o nulo");
+                JOptionPane.showMessageDialog(null, "Cantidad de días inválida, no puede ser negativo o nulo");
             }
             if(ensambF < ensambI){
                 acceptable = false;
@@ -535,10 +535,8 @@ public class Configuracion extends javax.swing.JFrame {
 
         }
         catch(NumberFormatException e){
-            JOptionPane.showMessageDialog(null, "Por favor, recuerde no incluir letras ni simbolos, solo números");
+            JOptionPane.showMessageDialog(null, "Por favor, solo introducir números enteros en cada uno de los campos");
         }
-        this.setVisible(false);
-        inicio = new Inicio();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void productorSDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorSDFActionPerformed

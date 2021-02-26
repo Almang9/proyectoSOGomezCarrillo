@@ -126,7 +126,6 @@ Map<String, String> dictionary;
         String[] splitFile;
         try{
             //Comprobando que el archivo tiene todos los campos necesarios
-            System.out.println(keys.length);
             if(file.length < 15){
                 return false;
             }
@@ -136,22 +135,11 @@ Map<String, String> dictionary;
                 value = splitFile[1];
                 //Comprobando que el archivo tiene todos los campos definidos correctamente
                 // Comprobando que el archivo tenga valores que no son menores al límite
-                System.out.println("field:  " + field +"key:  "+  keys[i][0]);
-                    System.out.println("value: "+  value + "min: " + keys[i][0]);
-                if(!(field.equals(keys[i][0]) && Integer.parseInt(value)>= Integer.parseInt(keys[i][1]))){  
-                    
-                    System.out.println("field "+ field + "key "+ keys[i][0]+"Stop making me sleep deprevid   Value:  "+ value + "   Min: "+  keys[i][1]);
-                return false;
-                
+                if(!(field.equals(keys[i][0]) && Integer.parseInt(value)>= Integer.parseInt(keys[i][1]))){
+                    return false;
                 }
                 if(i == 7 || i == 9 || i ==11 || i == 13 || i == 15 ){
-                    System.out.print("What  "+ Arrays.toString(file[i-1].split(":")));
-                    System.out.print("Whaaaaat  "+ Arrays.toString(file[i].split(":")));
-                    System.out.print("Lol  "+ i );
                     if(Integer.parseInt(file[i].split(":")[1]) < Integer.parseInt(file[i-1].split(":")[1])){
-                        System.out.print("DUDE  "+ Arrays.toString(file[i-1].split(":")));
-                        System.out.print("DUUUDE  "+ Arrays.toString(file[i].split(":")));
-                        
                         return false;
                     }
                 }

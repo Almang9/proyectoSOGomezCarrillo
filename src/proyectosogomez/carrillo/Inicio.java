@@ -38,7 +38,7 @@ public class Inicio extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel1.setFont(new java.awt.Font("Arial Narrow", 3, 36)); // NOI18N
-        jLabel1.setText("NEW 15SD XL EMULATOR");
+        jLabel1.setText("NEW 15SD XL SIMULATOR");
 
         jButton1.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
         jButton1.setText("Configuración");
@@ -70,7 +70,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(98, 98, 98)
                         .addComponent(jLabel1)))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
