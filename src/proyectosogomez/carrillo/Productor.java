@@ -65,8 +65,6 @@ public class Productor extends Thread{
                         
                         //Se almacenan los dos botones producidos
                         almacen.botones = almacen.botones + 2;
-                        System.out.println("Se produjeron 2 botones");
-                        System.out.println("Cantidad de botones: " + almacen.botones);
                         interfaz.setBotones(Integer.toString(almacen.botones));
                         
                         mutexAlmacen.release();
@@ -88,9 +86,8 @@ public class Productor extends Thread{
                         
                         //Se almacena la pantalla normal producida
                         almacen.pantallas++;
-                        System.out.println("Se produjo 1 pantalla normal");
-                        System.out.println("Cantidad de pantallas normales: " + almacen.pantallas);
                         interfaz.setPantallasN(Integer.toString(almacen.pantallas));
+                        
                         mutexAlmacen.release();
                         
                         //PANTALLAS TÁCTILES
@@ -101,9 +98,8 @@ public class Productor extends Thread{
                         
                         //Se almacena la pantalla táctil producida
                         almacen.pantallasTactil++;
-                        System.out.println("Se produjo 1 pantalla táctil");
-                        System.out.println("Cantidad de pantallas táctiles: " + almacen.pantallasTactil);
                         interfaz.setPantallasT(Integer.toString(almacen.pantallasTactil));
+                        
                         mutexAlmacen.release();
                         
                         //Aumenta la cantidad de pantallas que hay disponibles
@@ -122,9 +118,8 @@ public class Productor extends Thread{
                         
                         //Se almacenan el joystick producido
                         almacen.joysticks++;
-                        System.out.println("Se produjo 1 joystick");
-                        System.out.println("Cantidad de joysticks: " + almacen.joysticks);
                         interfaz.setJoysticks(Integer.toString(almacen.joysticks));
+                        
                         mutexAlmacen.release();
                         
                         //Aumenta la cantidad de joysticks que hay disponibles
@@ -143,9 +138,8 @@ public class Productor extends Thread{
                         
                         //Se almacena el lector SD producido
                         almacen.lectoresSD++;
-                        System.out.println("Se produjo 1 lector SD");
-                        System.out.println("Cantidad de lectores SD: " + almacen.lectoresSD);
                         interfaz.setTarjetasSD(Integer.toString(almacen.lectoresSD));
+                        
                         mutexAlmacen.release();
                         
                         //Aumenta la cantidad de lectores SD que hay disponibles

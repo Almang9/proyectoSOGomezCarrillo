@@ -48,11 +48,12 @@ public class Gerente extends Thread{
                 
                 this.estado = "Revisando contador...";
                 window.setGerente(this.estado);
-                // System.out.println("Gerente: " + this.estado);
+                Thread.sleep(250); //1/4 de segundo
+                
                 if (Simulacion.contador == 0) {
                     this.estado = "Desplegando New 15SD XL...";
                     window.setGerente(this.estado);
-                    //System.out.println("Gerente: " + this.estado);
+                    Thread.sleep(250); //1/4 de segundo
                     
                     //Verificar que los ensambladores no estén en el almacén
                     mutexAlmacen.acquire();
@@ -65,8 +66,6 @@ public class Gerente extends Thread{
                     Simulacion.contador = this.cantDias;
                     window.setDays(Integer.toString(this.cantDias));
                 }
-                
-                //System.out.println("Días restantes: " + Simulacion.contador);
                 
                 mutexCont.release();
                 

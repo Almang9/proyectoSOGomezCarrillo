@@ -43,10 +43,9 @@ public class Jefe extends Thread{
                 if (Simulacion.contador > 0) {
                     this.estado = "Modificando contador...";
                     window.setJefe(estado);
-                    //System.out.println("Jefe: " + this.estado);
+                    Thread.sleep(250); //1/4 de segundo
                     Thread.sleep((int)(x*6*1000)); //6 horas
                     Simulacion.contador--;
-                    System.out.println("Días restantes: " + Simulacion.contador);
                     window.setDays(Integer.toString(Simulacion.contador));
                 }
                 

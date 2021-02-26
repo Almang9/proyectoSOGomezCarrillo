@@ -77,7 +77,6 @@ Map<String, String> dictionary;
         for (String[] defaultOpt1 : defaultOpt){
                 dictionary.put(defaultOpt1[0], defaultOpt1[1]);
                 text = defaultOpt1[0] + ":" + defaultOpt1[1] + "\n";
-                System.out.println(" ");
         }
         FileWriter fw = new FileWriter("test\\datafile.txt");
         fw.write(text);
@@ -103,8 +102,7 @@ Map<String, String> dictionary;
         this.parameters = this.defaultOpt;
             for (String[] defaultOpt1 : defaultOpt) {
                 this.dictionary.put(defaultOpt1[0], defaultOpt1[1]);
-                text += defaultOpt1[0] + ":" + defaultOpt1[1] + "\n";                
-                System.out.println(Arrays.toString(defaultOpt1));
+                text += defaultOpt1[0] + ":" + defaultOpt1[1] + "\n";
             }
             FileWriter fw = new FileWriter("test\\datafile.txt");
             fw.write(text);
@@ -112,14 +110,13 @@ Map<String, String> dictionary;
         }
     }
         }
-     catch(IOException e) {
-     System.out.println(e);
-     for (String[] defaultOpt1 : defaultOpt) {
+    catch(IOException e) {
+    System.out.println(e);
+        for (String[] defaultOpt1 : defaultOpt) {
             dictionary.put(defaultOpt1[0], defaultOpt1[1]);
-            System.out.println(" ");}
+        }
             parameters = defaultOpt;
-     }
-    
+    }    
 }
     public boolean checkDatafile(String[] file){        
         //* Esta función revida que los datos obtenidos del archivo estén correctamente formateados               

@@ -12,7 +12,6 @@ package proyectosogomez.carrillo;
 public class main {
     
     public static void main(String[] args) {
-        Inicio s = new Inicio();
-        
+        Inicio s = new Inicio();    
     }
 }

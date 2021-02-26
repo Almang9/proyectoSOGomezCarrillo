@@ -68,95 +68,13 @@ public class Ensamblador extends Thread{
     public void run() {
         while (this.contratado) {
             try {
-//                //BOTONES
-//                
-//                //Verificar que hay suficientes botones disponibles
-//                eBotones.acquire(5); //5 botones
-//                
-//                //Verificar que el almacén de botones esté desocupado
-//                mutexBotones.acquire();
-//                
-//                almacen.botones = almacen.botones - 5;
-//                System.out.println("Se han tomado 5 botones del almacén");
-//                System.out.println("Cantidad de botones: " + almacen.botones);
-//                window.setBotones(Integer.toString(almacen.botones));
-//                mutexBotones.release();
-//                
-//                pBotones.release(5);
-//                
-//                //PANTALLAS
-//                
-//                //Verificar que hay suficientes pantallas disponibles
-//                ePantallas.acquire(2); //1 pantalla normal y 1 táctil
-//                
-//                //Verificar que el almacén de pantallas esté desocupado
-//                mutexPantallas.acquire();
-//                
-//                //PANTALLAS NORMALES
-//                almacen.pantallas--;
-//                System.out.println("Se ha tomado 1 pantalla normal del almacén");
-//                System.out.println("Cantidad de pantallas normales: " + almacen.pantallas);
-//                window.setPantallasN(Integer.toString(almacen.pantallas));
-//                //PANTALLAS TÁCTILES
-//                almacen.pantallasTactil--;
-//                System.out.println("Se ha tomado 1 pantalla táctil del almacén");
-//                System.out.println("Cantidad de pantallas táctiles: " + almacen.pantallasTactil);
-//                window.setPantallasT(Integer.toString(almacen.pantallasTactil));
-//                mutexPantallas.release();
-//                
-//                pPantallas.release(2);
-//                
-//                //JOYSTICKS
-//                
-//                //Verificar que hay suficientes joysticks disponibles
-//                eJoysticks.acquire(2); //2 joysticks
-//                
-//                //Verificar que el almacén de joysticks esté desocupado
-//                mutexJoysticks.acquire();
-//                
-//                almacen.joysticks = almacen.joysticks - 2;
-//                System.out.println("Se han tomado 2 joysticks del almacén");
-//                System.out.println("Cantidad de joysticks: " + almacen.joysticks);
-//                window.setJoysticks(Integer.toString(almacen.joysticks));
-//                mutexJoysticks.release();
-//                
-//                pJoysticks.release(2);
-//                
-//                //LECTORES SD
-//                
-//                //Verificar que hay suficientes lectores SD disponibles
-//                eSD.acquire(); //1 lector SD
-//                
-//                //Verificar que el almacén de lectoresSD esté desocupado
-//                mutexSD.acquire();
-//                
-//                almacen.lectoresSD--;
-//                System.out.println("Se han tomado 1 lector SD del almacén");
-//                System.out.println("Cantidad de lectores SD: " + almacen.lectoresSD);
-//                window.setTarjetasSD(Integer.toString(almacen.lectoresSD));
-//                //ENSAMBLAJE
-//                
-//                Thread.sleep(dia * 1000); //1 dia
-//                mutexSD.release();
-//                
-//                pSD.release();
-//                
-//                
-//                
-//                //Verificar que el almacen de consolas está desocupado
-//                mutexConsolas.acquire();
-//                
-//                almacen.consolas++;
-//                System.out.println("Se ha fabricado 1 consola New 15SD XL");
-//                System.out.println("Cantidad de consolas: " + almacen.consolas);
-//                window.setConsolas(Integer.toString(almacen.consolas));
-//                mutexConsolas.release();
-
                 //Verificar que todas las piezas necesarias se encuentran disponibles
                 eBotones.acquire(5); //5 botones
                 ePantallas.acquire(2); //1 pantalla normal y 1 táctil
                 eJoysticks.acquire(2); //2 joysticks
                 eSD.acquire(); //1 lector SD
+                
+                Thread.sleep(dia * 1000); //1 día
                 
                 //Se verifica que todos los almacenes no estén siendo ocupados
                 mutexBotones.acquire();
@@ -164,8 +82,6 @@ public class Ensamblador extends Thread{
                 mutexJoysticks.acquire();
                 mutexSD.acquire();
                 mutexConsolas.acquire();
-                
-                Thread.sleep(dia * 1000); //1 día
                 
                 //ENSAMBLAJE
                 almacen.botones = almacen.botones - 5; //Se restan 5 botones
