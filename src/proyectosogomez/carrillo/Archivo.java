@@ -46,11 +46,10 @@ String[][] keys = {
     {"ensambladoresF","0"}};
 String[][] defaultOpt = {{"contador","14"},
     {"duracionDia","24"},
-    {"almacenBotones","45"},
-    {"almacenSD","15"},
+    {"almacenBotones","45"},    
     {"almacenPantallas","40"},
     {"almacenJoystick","20"},
-    {"almacenSD","15" },
+    {"almacenSD","15"},    
     {"productorBotonesI","1"},
     {"productorBotonesF","3"},
     {"productorPantallasI","2"},
@@ -122,6 +121,8 @@ Map<String, String> dictionary;
         //* Esta función revida que los datos obtenidos del archivo estén correctamente formateados               
         String field;
         String value;
+        String initialv;
+        String max;
         String[] splitFile;
         try{
             //Comprobando que el archivo tiene todos los campos necesarios
@@ -132,15 +133,27 @@ Map<String, String> dictionary;
             for(int i = 0; i < file.length -1; i++){
                 splitFile = file[i].split(":");
                 field = splitFile[0];
-                value = splitFile[1];      
+                value = splitFile[1];
                 //Comprobando que el archivo tiene todos los campos definidos correctamente
                 // Comprobando que el archivo tenga valores que no son menores al límite
                 System.out.println("field:  " + field +"key:  "+  keys[i][0]);
                     System.out.println("value: "+  value + "min: " + keys[i][0]);
-                if(!(field.equals(keys[i][0]) && Integer.parseInt(value)>= Integer.parseInt(keys[i][1]))){                    
+                if(!(field.equals(keys[i][0]) && Integer.parseInt(value)>= Integer.parseInt(keys[i][1]))){  
+                    
+                    System.out.println("field "+ field + "key "+ keys[i][0]+"Stop making me sleep deprevid   Value:  "+ value + "   Min: "+  keys[i][1]);
                 return false;
+                
+                }
+                if(i == 7 || i == 9 || i ==11 || i == 13 || i == 15 ){
+                    if(Integer.parseInt(file[i].split(":")[1]) < Integer.parseInt(file[i-1].split(":")[1])){
+                        System.out.print("DUDE  "+ Arrays.toString(file[i-1].split(":")));
+                        System.out.print("DUUUDE  "+ Arrays.toString(file[i].split(":")));
+                        
+                        return false;
+                    }
                 }
             }
+            
             return true;
         }
         catch(Exception e){

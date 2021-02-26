@@ -11,7 +11,7 @@ package proyectosogomez.carrillo;
  */
 public class Window extends javax.swing.JFrame {
 static Simulacion s;
-public static volatile String x = "Test";
+
     /**
      * Creates new form Window
      */
