@@ -137,7 +137,7 @@ Map<String, String> dictionary;
                 // Comprobando que el archivo tenga valores que no son menores al límite
                 System.out.println("field:  " + field +"key:  "+  keys[i][0]);
                     System.out.println("value: "+  value + "min: " + keys[i][0]);
-                if(!(field.equals(keys[i][0]) && Integer.parseInt(value)> Integer.parseInt(keys[i][1]))){                    
+                if(!(field.equals(keys[i][0]) && Integer.parseInt(value)>= Integer.parseInt(keys[i][1]))){                    
                 return false;
                 }
             }
