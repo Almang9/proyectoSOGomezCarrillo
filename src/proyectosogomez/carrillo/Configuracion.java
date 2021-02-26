@@ -462,6 +462,8 @@ public class Configuracion extends javax.swing.JFrame {
             int prodPantallaF= Integer.parseInt(productorPantallasF.getText());
             int prodSDF=Integer.parseInt(productorSDF.getText());
             int prodJoystickF= Integer.parseInt(productorJoystickF.getText());
+            int ensambI = Integer.parseInt(ensambladoresI.getText());
+            int ensambF = Integer.parseInt(ensambladoresF.getText());
             boolean acceptable = true;
             if(prodSDI> prodSDF || prodSDF<1 || prodSDF < 0 || prodSDI < 0 ){
                 acceptable = false;
@@ -490,6 +492,10 @@ public class Configuracion extends javax.swing.JFrame {
             if(cont <= 0){
                 acceptable = false;
                 JOptionPane.showMessageDialog(null, "cantidad de días niválida, no puede ser negativo o nulo");
+            }
+            if(ensambF < ensambI){
+                acceptable = false;
+                JOptionPane.showMessageDialog(null, "Los limites de los ensambladores no son aceptables");
             }
             if (acceptable){
                 String contadortext = contador.getText();

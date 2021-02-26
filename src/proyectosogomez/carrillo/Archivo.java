@@ -28,7 +28,7 @@ String path = "test\\datafile.txt";
 String line;
 String text= "";
 String[][] keys = {
-    {"contador", "0"},
+    {"contador", "1"},
     {"duracionDia", "1"},
     {"almacenBotones", "6"},
     {"almacenPantallas","2"},
@@ -130,7 +130,7 @@ Map<String, String> dictionary;
             if(file.length < 15){
                 return false;
             }
-            for(int i = 0; i < file.length -1; i++){
+            for(int i = 0; i < file.length; i++){
                 splitFile = file[i].split(":");
                 field = splitFile[0];
                 value = splitFile[1];
@@ -145,6 +145,9 @@ Map<String, String> dictionary;
                 
                 }
                 if(i == 7 || i == 9 || i ==11 || i == 13 || i == 15 ){
+                    System.out.print("What  "+ Arrays.toString(file[i-1].split(":")));
+                    System.out.print("Whaaaaat  "+ Arrays.toString(file[i].split(":")));
+                    System.out.print("Lol  "+ i );
                     if(Integer.parseInt(file[i].split(":")[1]) < Integer.parseInt(file[i-1].split(":")[1])){
                         System.out.print("DUDE  "+ Arrays.toString(file[i-1].split(":")));
                         System.out.print("DUUUDE  "+ Arrays.toString(file[i].split(":")));
