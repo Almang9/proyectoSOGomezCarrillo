@@ -94,7 +94,7 @@ Map<String, String> dictionary;
         if(!"".equals(text) && !text.isEmpty() && checkDatafile(text_split) ){
         
         
-        for (int i = 0; i < defaultOpt.length; i++) {
+        for (int i = 0; i < text_split.length; i++) {
             dictionary.put(text_split[i].split(":")[0],text_split[i].split(":")[1]);
         }        
         }else{
@@ -125,22 +125,26 @@ Map<String, String> dictionary;
         String[] splitFile;
         try{
             //Comprobando que el archivo tiene todos los campos necesarios
-            if(file.length != 16){
+            System.out.println(keys.length);
+            if(file.length < 15){
                 return false;
             }
-            for(int i = 0; i < file.length; i++){
+            for(int i = 0; i < file.length -1; i++){
                 splitFile = file[i].split(":");
                 field = splitFile[0];
                 value = splitFile[1];      
                 //Comprobando que el archivo tiene todos los campos definidos correctamente
                 // Comprobando que el archivo tenga valores que no son menores al límite
-                if(!(field.equals(keys[i][0]) && Integer.parseInt(value)< Integer.parseInt(keys[i][1]))){
+                System.out.println("field:  " + field +"key:  "+  keys[i][0]);
+                    System.out.println("value: "+  value + "min: " + keys[i][0]);
+                if(!(field.equals(keys[i][0]) && Integer.parseInt(value)> Integer.parseInt(keys[i][1]))){                    
                 return false;
                 }
             }
             return true;
         }
         catch(Exception e){
+            System.out.println(e);
             return false;}
         }
         

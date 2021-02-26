@@ -36,27 +36,16 @@ public class Configuracion extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         duracionDia = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         contador = new javax.swing.JTextField();
         almacenBotones = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         almacenSD = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
         almacenJoystick = new javax.swing.JTextField();
         almacenPantallas = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         productorBotonesI = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
         productorSDI = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         productorJoystickI = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
         productorPantallasI = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         ensambladoresI = new javax.swing.JTextField();
         productorBotonesF = new javax.swing.JTextField();
@@ -64,13 +53,27 @@ public class Configuracion extends javax.swing.JFrame {
         productorPantallasF = new javax.swing.JTextField();
         ensambladoresF = new javax.swing.JTextField();
         productorSDF = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,9 +83,8 @@ public class Configuracion extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
         jLabel1.setText("Duracion de los días:");
-
-        jLabel2.setText("Dias para el despacho:");
 
         contador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,19 +98,11 @@ public class Configuracion extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("CAPACIDAD MÁXIMA DE ALMACEN:");
-
-        jLabel4.setText("Botones");
-
-        jLabel5.setText("Tarjetas SD:");
-
         almacenSD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 almacenSDActionPerformed(evt);
             }
         });
-
-        jLabel6.setText("Joysticks:");
 
         almacenJoystick.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,11 +116,8 @@ public class Configuracion extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setText("Pantallas");
-
+        jLabel8.setFont(new java.awt.Font("Arial Black", 2, 12)); // NOI18N
         jLabel8.setText("PERSONAL INCIAL:");
-
-        jLabel9.setText("CAPACIDAD MÁXIMA DE PERSONAL:");
 
         productorBotonesI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,15 +125,11 @@ public class Configuracion extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setText("Productor de Botones:");
-
         productorSDI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productorSDIActionPerformed(evt);
             }
         });
-
-        jLabel11.setText("Productor de Tarjetas SD:");
 
         productorJoystickI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,15 +137,11 @@ public class Configuracion extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setText("Productor de  Joysticks:");
-
         productorPantallasI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productorPantallasIActionPerformed(evt);
             }
         });
-
-        jLabel13.setText("Productor de  Pantallas:");
 
         jLabel14.setText("Ensambladores:");
 
@@ -198,16 +181,7 @@ public class Configuracion extends javax.swing.JFrame {
             }
         });
 
-        jLabel15.setText("Productor de Botones:");
-
-        jLabel16.setText("Productor de Tarjetas SD:");
-
-        jLabel17.setText("Productor de  Joysticks:");
-
-        jLabel18.setText("Productor de  Pantallas:");
-
-        jLabel19.setText("Ensambladores:");
-
+        jButton1.setFont(new java.awt.Font("Arial Narrow", 3, 18)); // NOI18N
         jButton1.setText("Guardar Configuración");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,6 +189,7 @@ public class Configuracion extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Arial Narrow", 3, 14)); // NOI18N
         jButton2.setText("Regresar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,101 +197,166 @@ public class Configuracion extends javax.swing.JFrame {
             }
         });
 
+        jLabel20.setFont(new java.awt.Font("Arial Black", 2, 12)); // NOI18N
+        jLabel20.setText("CAPACIDAD MÄXIMA DE PERSONAL:");
+
+        jLabel21.setFont(new java.awt.Font("Arial Black", 2, 12)); // NOI18N
+        jLabel21.setText("CAPACIDAD MÄXIMA DEL ALMACEN:");
+
+        jLabel3.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel3.setText("segundos");
+
+        jLabel9.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel9.setText("Productor de  Pantallas:");
+
+        jLabel22.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel22.setText("botones:");
+
+        jLabel23.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel23.setText("Tarjetas SD:");
+
+        jLabel24.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel24.setText("Joysticks:");
+
+        jLabel25.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel25.setText("Pantallas:");
+
+        jLabel26.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel26.setText("Productor de Botones:");
+
+        jLabel27.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel27.setText("Productor de Tarjetas SD:");
+
+        jLabel28.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel28.setText("Productor de  Joysticks:");
+
+        jLabel29.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel29.setText("Días para el despacho:");
+
+        jLabel30.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel30.setText("Ensambladores:");
+
+        jLabel31.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel31.setText("Ensambladores:");
+
+        jLabel10.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel10.setText("Productor de  Pantallas:");
+
+        jLabel32.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel32.setText("Productor de  Joysticks:");
+
+        jLabel33.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel33.setText("Productor de Tarjetas SD:");
+
+        jLabel34.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel34.setText("Productor de Botones:");
+
+        jLabel4.setFont(new java.awt.Font("Arial Narrow", 2, 12)); // NOI18N
+        jLabel4.setText("Días");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(23, 23, 23)
-                                        .addComponent(jLabel1)
-                                        .addGap(27, 27, 27)
-                                        .addComponent(duracionDia, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(contador, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addContainerGap()
+                                        .addComponent(jLabel22)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(almacenBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel23)
+                                            .addComponent(jLabel24)
+                                            .addComponent(jLabel25))
+                                        .addGap(18, 18, 18)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jLabel4)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(almacenBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jLabel6)
-                                                    .addComponent(jLabel5)
-                                                    .addComponent(jLabel7))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(almacenSD, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(almacenJoystick, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(almacenPantallas, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                                .addGap(63, 63, 63)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jLabel11)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel14))))
-                        .addGap(18, 18, 18)
+                                            .addComponent(almacenSD, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(almacenJoystick, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(almacenPantallas, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLabel29)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(contador, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLabel1)
+                                            .addGap(27, 27, 27)
+                                            .addComponent(duracionDia, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addGap(50, 50, 50)
+                                        .addComponent(jLabel26))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel27))))
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel30))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(productorSDI, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                                .addComponent(jLabel16)
                                 .addGap(18, 18, 18)
-                                .addComponent(productorSDF, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(productorBotonesI, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel15)
-                                .addGap(18, 18, 18)
-                                .addComponent(productorBotonesF, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(ensambladoresI, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel19)
-                                .addGap(18, 18, 18)
-                                .addComponent(ensambladoresF, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(productorPantallasI, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel18)
-                                .addGap(18, 18, 18)
-                                .addComponent(productorPantallasF, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(productorJoystickI, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel17)
-                                .addGap(18, 18, 18)
-                                .addComponent(productorJoystickF, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(productorSDI, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel33)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(productorSDF, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(productorPantallasI, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel10)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(productorPantallasF, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(productorJoystickI, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel32)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(productorJoystickF, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(productorBotonesI, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel34)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(productorBotonesF, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(ensambladoresI, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel31)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(ensambladoresF, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                                .addComponent(jLabel14)
+                                .addGap(240, 240, 240))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton1)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel8)
-                                .addGap(153, 153, 153)
-                                .addComponent(jLabel9))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton2)
-                                .addGap(30, 30, 30)))))
+                                .addGap(83, 83, 83)
+                                .addComponent(jLabel20)
+                                .addGap(9, 9, 9)))))
                 .addGap(29, 29, 29))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel21)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(48, 48, 48))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -326,62 +366,70 @@ public class Configuracion extends javax.swing.JFrame {
                         .addGap(55, 55, 55)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
-                            .addComponent(jLabel9))
+                            .addComponent(jLabel20))
                         .addGap(35, 35, 35)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(duracionDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1)
                             .addComponent(productorBotonesI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10)
                             .addComponent(productorBotonesF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15))
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel26)
+                            .addComponent(jLabel34))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
                             .addComponent(contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(productorSDI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11)
                             .addComponent(productorSDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16))
+                            .addComponent(jLabel27)
+                            .addComponent(jLabel29)
+                            .addComponent(jLabel33)
+                            .addComponent(jLabel4))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(productorJoystickI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12)
                             .addComponent(productorJoystickF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17))
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel32))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(productorPantallasI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13)
-                            .addComponent(productorPantallasF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(productorPantallasI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(productorPantallasF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel18)))
+                        .addComponent(jLabel10)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
                     .addComponent(ensambladoresI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ensambladoresF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel31))
+                .addGap(2, 2, 2)
+                .addComponent(jLabel21)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(almacenBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(almacenBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel22))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(almacenSD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel14)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(almacenJoystick, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(almacenSD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(almacenJoystick, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(almacenPantallas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                    .addComponent(jLabel25))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
@@ -394,7 +442,7 @@ public class Configuracion extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 1, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -406,164 +454,164 @@ public class Configuracion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void duracionDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_duracionDiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_duracionDiaActionPerformed
-
-    private void contadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_contadorActionPerformed
-
-    private void almacenBotonesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_almacenBotonesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_almacenBotonesActionPerformed
-
-    private void almacenSDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_almacenSDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_almacenSDActionPerformed
-
-    private void almacenJoystickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_almacenJoystickActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_almacenJoystickActionPerformed
-
-    private void almacenPantallasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_almacenPantallasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_almacenPantallasActionPerformed
-
-    private void productorBotonesIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorBotonesIActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productorBotonesIActionPerformed
-
-    private void productorSDIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorSDIActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productorSDIActionPerformed
-
-    private void productorJoystickIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorJoystickIActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productorJoystickIActionPerformed
-
-    private void productorPantallasIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorPantallasIActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productorPantallasIActionPerformed
-
-    private void ensambladoresIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ensambladoresIActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ensambladoresIActionPerformed
-
-    private void productorBotonesFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorBotonesFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productorBotonesFActionPerformed
-
-    private void productorJoystickFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorJoystickFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productorJoystickFActionPerformed
-
-    private void productorPantallasFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorPantallasFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productorPantallasFActionPerformed
-
-    private void ensambladoresFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ensambladoresFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ensambladoresFActionPerformed
-
-    private void productorSDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorSDFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productorSDFActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       try {
-       int cont = Integer.parseInt(contador.getText());
-       int duracion = Integer.parseInt(duracionDia.getText());
-       int capPantalla =Integer.parseInt(almacenPantallas.getText());
-       int capJoystick=Integer.parseInt(almacenJoystick.getText());
-       int capBotones=Integer.parseInt(almacenBotones.getText());
-       int capSD=Integer.parseInt(almacenSD.getText());
-       int prodBotonesI =Integer.parseInt(productorBotonesI.getText());
-       int prodPantallaI = Integer.parseInt(productorPantallasI.getText());
-       int prodSDI=Integer.parseInt(productorSDI.getText());
-       int prodJoystickI = Integer.parseInt(productorJoystickI.getText());
-       int prodBotonesF = Integer.parseInt(productorBotonesF.getText());
-       int prodPantallaF= Integer.parseInt(productorPantallasF.getText());
-       int prodSDF=Integer.parseInt(productorSDF.getText());
-       int prodJoystickF= Integer.parseInt(productorJoystickF.getText());
-       boolean acceptable = true;
-       if(prodSDI> prodSDF || prodSDF<1 || prodSDF < 0 || prodSDI < 0 ){
-           acceptable = false;
-           JOptionPane.showMessageDialog(null, "Los limites de los productores de tarjetas SD no son aceptables");
-       }
-       if(prodJoystickI > prodJoystickF || prodJoystickF <0 || prodJoystickI <0){
-           acceptable = false;
-           JOptionPane.showMessageDialog(null, "Los limites de los productores de joysticks no son aceptables");
-       }
-       if(prodBotonesI > prodBotonesF || prodBotonesF <0 || prodBotonesI <0){
-           acceptable = false;
-           JOptionPane.showMessageDialog(null, "Los limites de los productores de botones no son aceptables");
-       }
-       if(prodPantallaI > prodPantallaF || prodPantallaF <0 || prodPantallaI <0){
-           acceptable = false;
-           JOptionPane.showMessageDialog(null, "Los limites de los productores de pantallas no son aceptables");
-       }
-       if(capJoystick < 2 || capBotones < 6 || capSD < 1 || capPantalla < 2){
-           acceptable = false;
-           JOptionPane.showMessageDialog(null, "Capacidad de almacenamiento inválida, se debe poder almacernar lo suficiente como para poder ensamblar una consola");
-       }
-       if(duracion <= 0){
-           acceptable = false;
-           JOptionPane.showMessageDialog(null, "Duración del día niválida, no puede ser negativo o nulo");
-       }
-       if(cont <= 0){
-           acceptable = false;
-           JOptionPane.showMessageDialog(null, "cantidad de días niválida, no puede ser negativo o nulo");
-       }
-       if (acceptable){
-       String contadortext = contador.getText();
-       String duracionDiatext = duracionDia.getText();
-       String almacenBotonestext = almacenBotones.getText();
-       String almacenPantallastext = almacenPantallas.getText();
-       String almacenJoysticktext = almacenJoystick.getText();
-       String almacenSDtext = almacenSD.getText();
-       String productorBotonesItext =productorBotonesI.getText();
-       String productorBotonesFtext = productorBotonesF.getText();
-       String productorPantallasItext = productorPantallasI.getText();
-       String productorPantallasFtext = productorPantallasF.getText();
-       String productorJoystickItext = productorJoystickI.getText();
-       String productorJoystickFtext = productorJoystickF.getText();
-       String productorSDItext = productorSDI.getText();
-       String productorSDFtext = productorSDF.getText();
-       String ensambladoresItext = ensambladoresI.getText();
-       String ensambladoresFtext = ensambladoresF.getText();
-       archivo.saveDatafile(duracionDiatext,
-               contadortext,
-               almacenBotonestext,
-               almacenPantallastext,
-               almacenJoysticktext,
-               almacenSDtext,
-               productorBotonesItext,
-               productorBotonesFtext,
-               productorPantallasItext,
-               productorPantallasFtext,
-               productorJoystickItext,
-               productorJoystickFtext,
-               productorSDItext,
-               productorSDFtext,
-               ensambladoresItext,
-               ensambladoresFtext
-               );
-       }
-       
-       }
-       catch(NumberFormatException e){
-       JOptionPane.showMessageDialog(null, "Por favor, recuerde no incluir letras ni simbolos, solo números");
-       }
-       this.setVisible(false);
-       inicio = new Inicio();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         Inicio inicio = new Inicio();
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            int cont = Integer.parseInt(contador.getText());
+            int duracion = Integer.parseInt(duracionDia.getText());
+            int capPantalla =Integer.parseInt(almacenPantallas.getText());
+            int capJoystick=Integer.parseInt(almacenJoystick.getText());
+            int capBotones=Integer.parseInt(almacenBotones.getText());
+            int capSD=Integer.parseInt(almacenSD.getText());
+            int prodBotonesI =Integer.parseInt(productorBotonesI.getText());
+            int prodPantallaI = Integer.parseInt(productorPantallasI.getText());
+            int prodSDI=Integer.parseInt(productorSDI.getText());
+            int prodJoystickI = Integer.parseInt(productorJoystickI.getText());
+            int prodBotonesF = Integer.parseInt(productorBotonesF.getText());
+            int prodPantallaF= Integer.parseInt(productorPantallasF.getText());
+            int prodSDF=Integer.parseInt(productorSDF.getText());
+            int prodJoystickF= Integer.parseInt(productorJoystickF.getText());
+            boolean acceptable = true;
+            if(prodSDI> prodSDF || prodSDF<1 || prodSDF < 0 || prodSDI < 0 ){
+                acceptable = false;
+                JOptionPane.showMessageDialog(null, "Los limites de los productores de tarjetas SD no son aceptables");
+            }
+            if(prodJoystickI > prodJoystickF || prodJoystickF <0 || prodJoystickI <0){
+                acceptable = false;
+                JOptionPane.showMessageDialog(null, "Los limites de los productores de joysticks no son aceptables");
+            }
+            if(prodBotonesI > prodBotonesF || prodBotonesF <0 || prodBotonesI <0){
+                acceptable = false;
+                JOptionPane.showMessageDialog(null, "Los limites de los productores de botones no son aceptables");
+            }
+            if(prodPantallaI > prodPantallaF || prodPantallaF <0 || prodPantallaI <0){
+                acceptable = false;
+                JOptionPane.showMessageDialog(null, "Los limites de los productores de pantallas no son aceptables");
+            }
+            if(capJoystick < 2 || capBotones < 6 || capSD < 1 || capPantalla < 2){
+                acceptable = false;
+                JOptionPane.showMessageDialog(null, "Capacidad de almacenamiento inválida, se debe poder almacernar lo suficiente como para poder ensamblar una consola");
+            }
+            if(duracion <= 0){
+                acceptable = false;
+                JOptionPane.showMessageDialog(null, "Duración del día niválida, no puede ser negativo o nulo");
+            }
+            if(cont <= 0){
+                acceptable = false;
+                JOptionPane.showMessageDialog(null, "cantidad de días niválida, no puede ser negativo o nulo");
+            }
+            if (acceptable){
+                String contadortext = contador.getText();
+                String duracionDiatext = duracionDia.getText();
+                String almacenBotonestext = almacenBotones.getText();
+                String almacenPantallastext = almacenPantallas.getText();
+                String almacenJoysticktext = almacenJoystick.getText();
+                String almacenSDtext = almacenSD.getText();
+                String productorBotonesItext =productorBotonesI.getText();
+                String productorBotonesFtext = productorBotonesF.getText();
+                String productorPantallasItext = productorPantallasI.getText();
+                String productorPantallasFtext = productorPantallasF.getText();
+                String productorJoystickItext = productorJoystickI.getText();
+                String productorJoystickFtext = productorJoystickF.getText();
+                String productorSDItext = productorSDI.getText();
+                String productorSDFtext = productorSDF.getText();
+                String ensambladoresItext = ensambladoresI.getText();
+                String ensambladoresFtext = ensambladoresF.getText();
+                archivo.saveDatafile(duracionDiatext,
+                    contadortext,
+                    almacenBotonestext,
+                    almacenPantallastext,
+                    almacenJoysticktext,
+                    almacenSDtext,
+                    productorBotonesItext,
+                    productorBotonesFtext,
+                    productorPantallasItext,
+                    productorPantallasFtext,
+                    productorJoystickItext,
+                    productorJoystickFtext,
+                    productorSDItext,
+                    productorSDFtext,
+                    ensambladoresItext,
+                    ensambladoresFtext
+                );
+            }
+
+        }
+        catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Por favor, recuerde no incluir letras ni simbolos, solo números");
+        }
+        this.setVisible(false);
+        inicio = new Inicio();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void productorSDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorSDFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productorSDFActionPerformed
+
+    private void ensambladoresFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ensambladoresFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ensambladoresFActionPerformed
+
+    private void productorPantallasFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorPantallasFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productorPantallasFActionPerformed
+
+    private void productorJoystickFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorJoystickFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productorJoystickFActionPerformed
+
+    private void productorBotonesFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorBotonesFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productorBotonesFActionPerformed
+
+    private void ensambladoresIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ensambladoresIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ensambladoresIActionPerformed
+
+    private void productorPantallasIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorPantallasIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productorPantallasIActionPerformed
+
+    private void productorJoystickIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorJoystickIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productorJoystickIActionPerformed
+
+    private void productorSDIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorSDIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productorSDIActionPerformed
+
+    private void productorBotonesIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productorBotonesIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productorBotonesIActionPerformed
+
+    private void almacenPantallasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_almacenPantallasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_almacenPantallasActionPerformed
+
+    private void almacenJoystickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_almacenJoystickActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_almacenJoystickActionPerformed
+
+    private void almacenSDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_almacenSDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_almacenSDActionPerformed
+
+    private void almacenBotonesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_almacenBotonesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_almacenBotonesActionPerformed
+
+    private void contadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contadorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contadorActionPerformed
+
+    private void duracionDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_duracionDiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_duracionDiaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -613,21 +661,24 @@ public class Configuracion extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
